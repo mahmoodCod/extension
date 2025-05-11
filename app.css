@@ -1,0 +1,298 @@
+:root {
+    --primery-font-rg: 'NotoSans-Regular';
+    --primery-font-md: 'NotoSans-Medium';
+    --primery-font-bd: 'NotoSans-Bold';
+    --primery-color-text: '#fff';
+    --primery-color-mode: hsl(0, 0%, 93%);
+}
+.dark-theme body{
+    background: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
+.dark-theme .list__link  {
+    background-color: hsl(225, 23%, 24%);
+    color: var(--primery-color-mode);
+    border: 1px solid hsl(0, 0%, 44%);
+}
+.dark-theme .list__link--active {
+    background-color: hsl(3, 77%, 44%);
+    color: var(--primery-color-text);
+}
+.dark-theme .list__link:hover{
+    color: hsl(0, 0%, 78%);
+    background-color: hsl(226, 11%, 37%);
+}
+.dark-theme .list__link--active:hover,
+.dark-theme .extension__link:hover {
+    background-color: hsl(3, 71%, 56%);
+    color: var(--primery-color-text);
+}
+.dark-theme .list__title {
+    color: var(--primery-color-mode);
+}
+.dark-theme .extension,
+.dark-theme .extension__logo path,
+.dark-theme .extension__box {
+    background-color: hsl(226, 25%, 17%);
+    fill: hsl(0, 0%, 78%);
+    border: none;
+}
+.dark-theme .extension__box {
+    border: 1px solid hsl(0, 0%, 44%);
+    color: var(--primery-color-mode);
+}
+.dark-theme .extension__theme{
+    background-color: hsl(225, 23%, 24%);
+}
+.dark-theme .extension__theme:hover {
+    background-color: hsl(226, 11%, 37%);
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: var(--primery-font-md);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-color: hsl(217, 61%, 90%);
+}
+
+li {
+    list-style-type: none;
+}
+
+/* 
+
+-- app --
+
+*/
+/* 
+
+==========
+  header
+==========
+
+*/
+
+.header {
+    margin-top: 2rem;
+}
+.extension {
+    background-color: var(--primery-color-mode);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    border: 1px solid hsl(0, 1%, 79%);
+    padding: .5rem .5rem;
+}
+.extension__logo {
+    cursor: pointer;
+}
+.extension__theme {
+    display: flex;
+    align-items: center;
+    padding: .7rem .8rem;
+    background-color: hsl(0, 0%, 78%);
+    border-radius: 1rem;
+    transition: all 150ms ease-in;
+    cursor: pointer;
+}
+.extension__theme:hover {
+    background-color: hsl(0, 1%, 70%);
+    transition: all 150ms ease-in;
+}
+
+/* 
+
+=========
+  main
+=========
+
+*/
+
+.main {
+    margin-top: 5rem;
+}
+.list__contents {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.list__title {
+    font-family: var(--primery-font-bd);
+    font-size: 1.8rem;
+    color: hsl(226, 25%, 17%);
+}
+.list__items {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.list__link {
+    font-family: var(--primery-font-rg);
+    padding: .6rem 1rem;
+    background-color: var(--primery-color-mode);
+    border-radius: 2rem;
+    border: 1px solid hsl(0, 1%, 79%);
+    transition: all 150ms ease-in;
+    cursor: pointer;
+}
+.list__link:hover {
+    color:hsl(226, 11%, 37%);
+    transition: all 150ms ease-in;
+    border: 1px solid transparent;
+}
+.list__link--active {
+    background-color: hsl(3, 77%, 44%);
+    color: var(--primery-color-mode);
+    border: 1px solid transparent;
+}
+.list__link--active:hover {
+    color: hsl(0, 0%, 78%);
+    border: 1px solid transparent;
+}
+
+/* 
+
+================
+  extensionBox
+================
+
+*/
+
+.extension__boxs {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.extension__box {
+    width: 25rem;
+    min-height: 12rem;
+    padding: 1.2rem 1.2rem 1rem 1.2rem;
+    background-color: var(--primery-color-mode, #fff);
+    border-radius: 1rem;
+    border: 1px solid hsl(0, 1%, 79%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    transition: box-shadow 0.2s;
+}
+
+.extension__box:hover {
+    box-shadow: 0 4px 24px #0001;
+}
+
+.extension__contact {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.extension__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding-left: 0;
+}
+
+.extension__title {
+    font-family: var(--primery-font-bd, sans-serif);
+    font-size: 1.1rem;
+    margin: 0 0 0.2rem 0;
+    padding: 0;
+}
+.extension__discription {
+    font-family: var(--primery-font-rg, sans-serif);
+    line-height: 1.5;
+    opacity: 0.75;
+    font-size: 0.98rem;
+    margin: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    text-overflow: ellipsis;
+    max-height: calc(1.5em * 3);
+}
+
+.extension__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 0.2rem;
+}
+
+.extension__link {
+    font-family: var(--primery-font-md, sans-serif);
+    border-radius: 1rem;
+    opacity: 0.85;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid hsl(0, 1%, 79%);
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 150ms ease-in;
+    outline: none;
+    margin: 0;
+}
+
+.extension__link:hover {
+    background-color: hsl(3, 77%, 44%);
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+    background-color: rgb(199, 199, 199);
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.extension__input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 1rem;
+    background: rgb(199, 199, 199);
+    transition: background 0.2s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 1.1rem;
+    width: 1.1rem;
+    left: 0.2rem;
+    bottom: 0.2rem;
+    background-color: #fff;
+    border-radius: 100%;
+    transition: transform 0.15s;
+}
+
+.extension__input:checked + .slider {
+    background: hsl(3, 77%, 44%);
+}
+.extension__input:checked + .slider::before {
+    transform: translateX(1.5rem);
+}
